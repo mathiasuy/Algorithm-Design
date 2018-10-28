@@ -267,7 +267,7 @@ En el presente contexto, veremos que la respuesta a nuestra pregunta es sorprend
 
 \textbf{Todas las ejecuciones producen el mismo ajuste.}
 Hay varias maneras posibles de probar una afirmación como esta, muchas de las cuales resultarían en argumentos bastante complicados. Resulta que el enfoque más fácil y más informativo para nosotros será caracterizar de forma única la coincidencia que se obtiene y luego mostrar que todas las ejecuciones dan como resultado el emparejamiento con esta caracterización.
-¿Cuál es la caracterización? Mostraremos que cada hombre termina con la "mejor pareja posible" en un sentido concreto. (Recuerde que esto es cierto si todos los hombres prefieren mujeres diferentes). Primero, diremos que una mujer $w$ es una pareja válida de un hombre $m$ si hay una pareja estable que contiene el par $(m, w)$. Diremos que $w$ es la mejor pareja válida de $m$ si $w$ es una pareja válida de $m$, y ninguna mujer con un rango $m$ superior a $w$ es una pareja válida de $m$. Utilizaremos el mejor $(m)$ para denotar la mejor pareja válida de $m$. Ahora, deje que $S*$ denote el conjunto de pares ${(m, mejor (m)): m ∈ M}$. Vamos a probar el siguiente hecho\\ \\\\
+¿Cuál es la caracterización? Mostraremos que cada hombre termina con la "mejor pareja posible" en un sentido concreto. (Recuerde que esto es cierto si todos los hombres prefieren mujeres diferentes). Primero, diremos que una mujer $w$ es una pareja válida de un hombre $m$ si hay una pareja estable que contiene el par $(m, w)$. Diremos que $w$ es la mejor pareja válida de $m$ si $w$ es una pareja válida de $m$, y ninguna mujer con un rango $m$ superior a $w$ es una pareja válida de $m$. Utilizaremos el mejor $(m)$ para denotar la mejor pareja válida de $m$. Ahora, deje que $S*$ denote el conjunto de pares ${(m, mejor (m)): m  \in  M}$. Vamos a probar el siguiente hecho\\ \\\\
  \colorbox{mygray}{\parbox{15cm}{
 \textbf{(1.7) Cada ejecución del algoritmo $G-S$ da como resultado el conjunto $S*$.}}}\\
       \\
@@ -323,7 +323,7 @@ Empecemos ahora la discusión sobre los cinco problemás representativos.\\
 
 Considere el siguiente problema de planificación muy simple. Usted tiene un recurso, puede ser una sala de conferencias, una supercomputadora o un microscopio electrónico, y muchas personas solicitan utilizar el recurso durante períodos de tiempo. Una solicitud toma la forma: ¿Puedo reservar el recurso comenzando en el tiempo $s$, hasta el momento $f$? Asumiremos que el recurso puede ser utilizado por, como máximo, una persona a la vez. Un planificador desea aceptar un subconjunto de estas solicitudes, rechazando todas las demás, de modo que las solicitudes aceptadas no se superpongan en el tiempo. El objetivo es maximizar la cantidad de solicitudes aceptadas.\\
 
-Más formalmente, habrá $n$ solicitudes etiquetadas como $1, ..., n$, con cada solicitud que especifique una hora de inicio $s_i$ y un tiempo de finalización $f_i$. Naturalmente, tenemos $s_i<f_i$ para todo $i$. Dos solicitudes $i$ y $j$ son compatibles si los intervalos solicitados no se superponen: es decir, o la solicitud $i$ es para un intervalo de tiempo anterior a la solicitud $j$ ($f_i≤s_j$), o la solicitud $i$ es para un momento posterior a la solicitud $j$ ($f_j≤s_i$). En general, diremos que un subconjunto $A$ de solicitudes es compatible si todos los pares de solicitudes $i$, $j ∈ A$, $i≠J$ son compatibles. El objetivo es seleccionar un subconjunto compatible de solicitudes del tamaño máximo posible.\\
+Más formalmente, habrá $n$ solicitudes etiquetadas como $1, ..., n$, con cada solicitud que especifique una hora de inicio $s_i$ y un tiempo de finalización $f_i$. Naturalmente, tenemos $s_i<f_i$ para todo $i$. Dos solicitudes $i$ y $j$ son compatibles si los intervalos solicitados no se superponen: es decir, o la solicitud $i$ es para un intervalo de tiempo anterior a la solicitud $j$ ($f_i≤s_j$), o la solicitud $i$ es para un momento posterior a la solicitud $j$ ($f_j≤s_i$). En general, diremos que un subconjunto $A$ de solicitudes es compatible si todos los pares de solicitudes $i$, $j  \in  A$, $i≠J$ son compatibles. El objetivo es seleccionar un subconjunto compatible de solicitudes del tamaño máximo posible.\\
 
 Ilustramos una instancia de este problema de planificación de intervalos en la figura. Tenga en cuenta que hay un único conjunto compatible de tamaño 4, y este es el conjunto compatible más grande.\\
 
@@ -428,8 +428,8 @@ Podemos pensar en una generalización del problema de apareamiento estable en el
 
 \begin{enumerate}
     \item  Hay dos pares $(m,w)$ y $(m',w')$ en $S$ con la propiedad de que $(m,w')∉F$, $m$ prefiere $w'$ a $w$, y $w'$ prefiere $m$ a $m'$. (El tipo usual de inestabilidad).
-    \item Hay un par $(m,w)∈S$, y un hombre $m'$, de modo que $m'$ no es parte de ningún par en el emparejamiento, $(m',w)∉F$, y $w$ prefiere $m'$ a $m$. (Un hombre soltero es más deseable y no está prohibido).
-    \item  Hay un par $(m,w)∈S$, y una mujer $w'$, de modo que $w'$ no es parte de ningún par en el emparejamiento, $(m,w')∉F$, y $m$ prefiere $w'$ a $w$. (Una mujer soltera es más deseable y no está prohibida).
+    \item Hay un par $(m,w) \in S$, y un hombre $m'$, de modo que $m'$ no es parte de ningún par en el emparejamiento, $(m',w)∉F$, y $w$ prefiere $m'$ a $m$. (Un hombre soltero es más deseable y no está prohibido).
+    \item  Hay un par $(m,w) \in S$, y una mujer $w'$, de modo que $w'$ no es parte de ningún par en el emparejamiento, $(m,w')∉F$, y $m$ prefiere $w'$ a $w$. (Una mujer soltera es más deseable y no está prohibida).
     \item Hay un hombre m y una mujer $w$, ninguno de los cuales es parte de ningún par en el emparejamiento, por lo que $(m,w)∉F$. (Hay dos personas solteras sin nada que les impide casarse entre sí).
    \end{enumerate}
 
@@ -460,9 +460,9 @@ Prueba. Nuestra definición general de inestabilidad tiene cuatro partes: Esto s
 
 Primero, supongamos que hay una inestabilidad de tipo (i), que consiste en pares $(m,w)$ y $(m',w')$ en S con la propiedad de que $(m,w')∉F$, m prefiere $w'$ a $w$, y $w'$ prefiere $m$ a $m'$. Se sigue que m debe haber propuesto a $w'$; así que rechacé a $m$, y por lo tanto ella prefiere que su compañero final sea una contradicción.\\
 
-Luego, supongamos que hay una inestabilidad de tipo (ii), que consiste en un par $(m,w)∈S$, y un hombre $m'$, de modo que $m'$ no es parte de ningún par en el emparejamiento, $(m',w)∉F$, y $w$ prefiere $m'$ a $m$. Entonces $m'$ debe haber propuesto $w$ y haber sido rechazado; De nuevo, se sigue que $w$ prefiere a su compañero final como $m'$ -una contradicción.\\
+Luego, supongamos que hay una inestabilidad de tipo (ii), que consiste en un par $(m,w) \in S$, y un hombre $m'$, de modo que $m'$ no es parte de ningún par en el emparejamiento, $(m',w)∉F$, y $w$ prefiere $m'$ a $m$. Entonces $m'$ debe haber propuesto $w$ y haber sido rechazado; De nuevo, se sigue que $w$ prefiere a su compañero final como $m'$ -una contradicción.\\
 
-En tercer lugar, supongamos que hay una inestabilidad de tipo (iii), que consiste en un par $(m,w)∈S$, y una mujer $w'$, por lo que $w'$ no es parte de ningún par en el emparejamiento, $(m,w')∉F$, y $m$ prefiere $w'$ a $w$. Entonces, ningún hombre se propuso a nada; en particular, $m$ nunca propuso $w'$, por lo que debe preferir $w$ a $w'$, una contradicción.\\
+En tercer lugar, supongamos que hay una inestabilidad de tipo (iii), que consiste en un par $(m,w) \in S$, y una mujer $w'$, por lo que $w'$ no es parte de ningún par en el emparejamiento, $(m,w')∉F$, y $m$ prefiere $w'$ a $w$. Entonces, ningún hombre se propuso a nada; en particular, $m$ nunca propuso $w'$, por lo que debe preferir $w$ a $w'$, una contradicción.\\
 
 Finalmente, supongamos que hay una inestabilidad de tipo (iv), que consiste en un hombre $m$ y una mujer $w$, ninguno de los cuales es parte de ningún par en el emparejamiento, de modo que $(m,w)∉F$. Pero para que yo sea soltero, él debe haber propuesto a cada mujer no prohibida; en particular, debe haberlo propuesto, lo que significa que ya no estaría soltera, una contradicción. $ \blacksquare $\\
 
@@ -1234,7 +1234,7 @@ El conjunto de nodos descubiertos por el algoritmo BFS es precisamente los alcan
 
 Ahora, si uno lo piensa, está claro que BFS es solo una manera posible de
 producir esta componente. En un nivel más general, podemos construir la componente
-$R$ "explorando" $G$ en cualquier orden, comenzando desde $s$. Para comenzar, definimos $R = {s}$. Entonces, en cualquier punto en el tiempo, si encontramos una arista $(u, v)$ donde $u ∈ R$ y \(v \notin  R\), puede agregar $v$ a $R$. De hecho, si hay un camino $P$ de $s$ a $u$, entonces hay un camino de $s$ a $v$ obtenido al seguir primero a $P$ y luego seguir la arista $(u, v)$. \\
+$R$ "explorando" $G$ en cualquier orden, comenzando desde $s$. Para comenzar, definimos $R = {s}$. Entonces, en cualquier punto en el tiempo, si encontramos una arista $(u, v)$ donde $u  \in  R$ y \(v \notin  R\), puede agregar $v$ a $R$. De hecho, si hay un camino $P$ de $s$ a $u$, entonces hay un camino de $s$ a $v$ obtenido al seguir primero a $P$ y luego seguir la arista $(u, v)$. \\
 
 La Figura 3.4 ilustra este paso básico en el crecimiento de la componente $R$.
 Supongamos que seguimos creciendo el conjunto $R$ hasta que no hayan más aristas
@@ -1254,10 +1254,10 @@ Aquí está la propiedad clave de este algoritmo:\\
  \colorbox{mygray}{\parbox{15cm}{
 	\textbf{(3.5):} El conjunto $R$ producido al final del algoritmo es precisamente la componente conexa de $G$ que contiene a $s$.}}\\\\
 
-\textbf{Demostración:} ya hemos argumentado que para cualquier nodo $v ∈ R$, hay una ruta desde $s$ a $v$.\\
+\textbf{Demostración:} ya hemos argumentado que para cualquier nodo $v  \in  R$, hay una ruta desde $s$ a $v$.\\
 
 Ahora, considere un nodo $w \not{\epsilon} R$, y suponga a modo de contradicción, que
-hay un camino $s-w$ $P$ en $G$. Dado que $s ∈ R$ pero $w \not{\epsilon} R$, debe haber un primer nodo $v$ en $P$ que no pertenece a $R$; y este nodo $v$ no es igual a $s$. Por lo tanto, hay un nodo $u$ inmediatamente anterior $v$ en $P$, entonces $(u, v)$ es una arista. Por otra parte, desde $v$ es el primer nodo en $P$ que no pertenece a $R$, debemos tener $u ∈ R$. Sigue que $(u, v)$ es una arista donde $u ∈ R$ y $v \not{\epsilon} R$; esto contradice la regla de parar el algoritmo. $ \blacksquare $ \\
+hay un camino $s-w$ $P$ en $G$. Dado que $s  \in  R$ pero $w \not{\epsilon} R$, debe haber un primer nodo $v$ en $P$ que no pertenece a $R$; y este nodo $v$ no es igual a $s$. Por lo tanto, hay un nodo $u$ inmediatamente anterior $v$ en $P$, entonces $(u, v)$ es una arista. Por otra parte, desde $v$ es el primer nodo en $P$ que no pertenece a $R$, debemos tener $u  \in  R$. Sigue que $(u, v)$ es una arista donde $u  \in  R$ y $v \not{\epsilon} R$; esto contradice la regla de parar el algoritmo. $ \blacksquare $ \\
 
 Para cualquier nodo $t$ en la componente $R$, observe que es fácil recuperar el
 camino real de $s$ a $t$ a lo largo de las líneas del argumento anterior: simplemente registramos, para cada nodo $v$, la arista $(u, v)$ que se consideró en la iteración en la que $v$ se agregó a $R$. Luego, al trazar estas aristas hacia atrás desde $t$, procedemos a través de una secuencia de nodos que se agregaron en iteraciones anteriores, eventualmente alcanzando $s$; esto define un camino $s-t$. \\
@@ -1352,14 +1352,14 @@ Hay dos formás básicas de representar grafos: mediante una matriz de adyacenci
 
 Un grafo \(G = (V, E)\) tiene dos parámetros de entrada naturales, el número de nodos \(|V|\), y el número de aristas \(|E|\). Utilizaremos \( n = |V|\) y \(m = |E|\) para denotar estos, respectivamente. Los tiempos de ejecución se darán en términos de estos dos parámetros. Como de costumbre, buscaremos tiempos de ejecución polinomiales, y los polinomios de menor grado son mejores. Sin embargo, con dos parámetros en el tiempo de ejecución, la comparación no siempre es tan clara. ¿Es \(O(m^{2})\) u \(O(n^{3})\) un mejor tiempo de ejecución? Esto depende de la relación entre $n$ y $m$. Con a lo sumo una arista entre cualquier par de nodos, el número de aristas $m$ puede ser como máximo \(\binom{n}{2} ≤ n^{2}\). Por otro lado, en muchas aplicaciones los grafos de interés son conexos, y según \textit{(3.1)}, los grafos conexos deben tener al menos \(\textit{m ≥ n }- 1\) aristas. Pero estas comparaciones no siempre nos dicen cuál de los dos tiempos de ejecución (como \(m^{2}\) y \(n^{3}\)) es mejor, por lo que tenderemos a mantener los tiempos de ejecución en términos de estos dos parámetros. En esta sección pretendemos implementar los algoritmos básicos de búsqueda de grafos en el tiempo \(O(m+n)\). Nos referiremos a esto como \textit{tiempo lineal}, ya que toma \(O(m+n)\) tiempo simplemente para leer la entrada. Tenga en cuenta que cuando trabajamos con grafos conexos, un tiempo de ejecución de \(O(m+n)\) es el mismo que \(O(m)\), ya que \( m ≥ n - 1.\)\\ 
 
-Considere un grafo $G = (V, E)$ con \textit{n} nodos, y suponga que el conjunto de nodos es $V = \{1,. . . , n\}$. La forma más sencilla de representar un grafo es mediante una matriz A de adyacencia, que es una matriz \(n × n\) donde A[$u,v$] es igual a 1 si el grafo contiene la arista \textit{($u$,$v$)} y 0 en caso contrario. Si el grafo no está dirigido, la matriz A es simétrica, con A[$u,v$] = A[$v,u$] para todos los nodos $u$, $v$ ∈ $V$. La representación de la matriz de adyacencia nos permite verificar en \(O(1)\) si una arista dada ($u$, $v$) está presente en el grafo. Sin embargo, la representación tiene dos desventajas básicas.
+Considere un grafo $G = (V, E)$ con \textit{n} nodos, y suponga que el conjunto de nodos es $V = \{1,. . . , n\}$. La forma más sencilla de representar un grafo es mediante una matriz A de adyacencia, que es una matriz \(n × n\) donde A[$u,v$] es igual a 1 si el grafo contiene la arista \textit{($u$,$v$)} y 0 en caso contrario. Si el grafo no está dirigido, la matriz A es simétrica, con A[$u,v$] = A[$v,u$] para todos los nodos $u$, $v  \in  V$. La representación de la matriz de adyacencia nos permite verificar en \(O(1)\) si una arista dada ($u$, $v$) está presente en el grafo. Sin embargo, la representación tiene dos desventajas básicas.
 
 \begin{itemize}
 \item La representación toma \(\Theta (n^{2})\) espacio. Cuando el grafo tiene muchos menos aristas que \(n^{2}\), se pueden encontrar representaciones más compactas.
 \item Muchos algoritmos de grafos necesitan examinar todas las aristas incidentes en un nodo dado $v$. En la representación de la matriz de adyacencia, hacer esto implica considerar todos los otros nodos $w$, y verificar la entrada de matriz A [$v$, $w$] para ver si la arista ($v, w$) está presente, y esto lleva \(\Theta (n)\) tiempo. En el peor de los casos, $v$ puede tener \(\Theta (n)\) aristas incidentes, en cuyo caso el control de todas estas aristas tomará tiempo \(\Theta (n)\) independientemente de la representación. Pero muchos grafos en la práctica tiene significativamente menos aristas incidentes en la mayoría de los nodos, por lo que sería bueno poder encontrar todas estas aristas de incidente de manera más eficiente.
 \end{itemize}
 \paragraph{}
-La representación de los grafos utilizados en todo el libro es la lista de adyacencia, que funciona mejor para grafos dispersos-es decir, aquellos con muchos menos que \(n^{2}\) aristas. En la representación de la \textit{lista de adyacencia} hay un registro para cada nodo $v$, que contiene una lista de los nodos a los que $v$ tiene aristas. Para ser precisos, tenemos un array Adj, donde Adj[$v$] es un registro que contiene una lista de todos los nodos adyacentes al nodo v. Para un grafo no dirigido $G = (V, E)$, cada arista $e =(v, w)$  ∈ $E$ ocurre en dos listas de adyacencia: el nodo $w$ aparece en la lista para el nodo $v$, y el nodo $v$ aparece en la lista para el nodo $w$.\\
+La representación de los grafos utilizados en todo el libro es la lista de adyacencia, que funciona mejor para grafos dispersos-es decir, aquellos con muchos menos que \(n^{2}\) aristas. En la representación de la \textit{lista de adyacencia} hay un registro para cada nodo $v$, que contiene una lista de los nodos a los que $v$ tiene aristas. Para ser precisos, tenemos un array Adj, donde Adj[$v$] es un registro que contiene una lista de todos los nodos adyacentes al nodo v. Para un grafo no dirigido $G = (V, E)$, cada arista $e =(v, w)   \in  E$ ocurre en dos listas de adyacencia: el nodo $w$ aparece en la lista para el nodo $v$, y el nodo $v$ aparece en la lista para el nodo $w$.\\
 
 Comparemos la matriz de adyacencia y las representaciones de la lista de adyacencia. Primero considere el espacio requerido por la representación. Una matriz de adyacencia requiere \(O(n^{2})\) espacio, ya que utiliza una matriz $n × n$. Por el contrario, afirmamos que la representación de la lista de adyacencia requiere solo \(O(m + n)\) espacio. Aquí está el por qué. Primero, necesitamos una serie de punteros de longitud $n$ para configurar las listas en Adj, y luego necesitamos espacio para todas las listas. Ahora, las longitudes de estas listas pueden diferir de nodo a nodo, pero argumentamos en el párrafo anterior que en general, cada arista \(e = (v, w)\) aparece en exactamente dos de las listas: la de $v$ y la de $w$ . Por lo tanto, la longitud total de todas las listas es \(2m = O(m)\).
 \\Otra forma (esencialmente equivalente) de justificar este límite es la siguiente. Definimos el \textit{grado} \(n_{v}\) de un nodo $v$ como el número de aristas de incidente que tiene. La longitud de la lista en Adj[$v$] es \(n_{v}\), por lo que la longitud total de todos los nodos es \(O( \sum_{v\epsilon V} {n_{v}})\) . Ahora, la suma de los grados en un grafo es una cantidad que a menudo aparece en el análisis de los algoritmos de grafos, por lo que es útil determinar cuál es esta suma.
@@ -1495,7 +1495,7 @@ Es fácil reconocer que un grafo es bipartito cuando los conjuntos $X$ e $Y$ (es
 
 \subparagraph*{Diseñando el Algoritmo}
 \paragraph{}
-De hecho, hay un procedimiento muy simple para probar la bipartidad, y este análisis puede usarse para mostrar que los ciclos impares son el \textit{único} obstáculo. En primer lugar, suponemos que el grafo $G$ es conexo, ya que, de lo contrario, primero podemos calcular sus componentes conexas y analizarlas por separado. A continuación, seleccionamos cualquier nodo \(s ∈ V\) y lo coloreamos en rojo; no hay pérdida al hacer esto, ya que $s$ debe recibir algún color. Se deduce que todos los vecinos de $s$ deben ser de color azul, así que hacemos esto. Luego se deduce que todos los vecinos de $estos$ nodos deben ser de color rojo, sus vecinos deben ser de color azul, y así sucesivamente, hasta que todo el grafo esté coloreado. En este punto, o bien tenemos una coloración válida de rojo/azul de $G$, en la que cada arista tiene extremos de colores opuestos, o hay alguna arista con extremos del mismo color. En este último caso, parece claro que no hay nada que pudiéramos haber hecho: $G$ simplemente no es bipartito. Ahora queremos discutir este punto con precisión y también encontrar una manera eficiente de realizar el coloreado.
+De hecho, hay un procedimiento muy simple para probar la bipartidad, y este análisis puede usarse para mostrar que los ciclos impares son el \textit{único} obstáculo. En primer lugar, suponemos que el grafo $G$ es conexo, ya que, de lo contrario, primero podemos calcular sus componentes conexas y analizarlas por separado. A continuación, seleccionamos cualquier nodo \(s  \in  V\) y lo coloreamos en rojo; no hay pérdida al hacer esto, ya que $s$ debe recibir algún color. Se deduce que todos los vecinos de $s$ deben ser de color azul, así que hacemos esto. Luego se deduce que todos los vecinos de $estos$ nodos deben ser de color rojo, sus vecinos deben ser de color azul, y así sucesivamente, hasta que todo el grafo esté coloreado. En este punto, o bien tenemos una coloración válida de rojo/azul de $G$, en la que cada arista tiene extremos de colores opuestos, o hay alguna arista con extremos del mismo color. En este último caso, parece claro que no hay nada que pudiéramos haber hecho: $G$ simplemente no es bipartito. Ahora queremos discutir este punto con precisión y también encontrar una manera eficiente de realizar el coloreado.
 \paragraph{}
 Lo primero que hay que notar es que el procedimiento de coloreado que acabamos de describir es esencialmente idéntico a la descripción de BFS: nos movemos hacia afuera desde $s$, coloreando los nodos apenas los encontramos por primera vez. De hecho, otra forma de describir el algoritmo de coloración es la siguiente: realizamos BFS, coloreando $s$ rojo, toda la capa \(L_{1}\) azul, toda la capa \(L_{2}\) roja, y así sucesivamente, coloreando las capas impares con las capas azul y las capas pares de rojo.
 	Podemos implementar esto sobre BFS, simplemente tomando la implementación de BFS y agregando un array adicional \textit{Color} sobre los nodos. Cada vez que llegamos a un paso en BFS donde estamos agregando un nodo $v$ a una lista L[$i+1$], asignamos \(Color[v] = rojo\) si \(i+1\) es un número par, y \(Color[v] = azul\) si \(i + 1\) es un número impar. Al final de este procedimiento, simplemente escaneamos todos las aristas y determinamos si hay alguna arista en el que ambos extremos recibieron el mismo color. Por lo tanto, el tiempo total de ejecución para el algoritmo de coloreado es \(O(m+n)\), igual que BFS.
@@ -1513,7 +1513,7 @@ Ahora demostraremos un lema que muestra que este algoritmo determina correctamen
 }}\\\\
 \paragraph{}
 \textbf{Demostración:} Consideremos primero el caso $(1)$, donde suponemos que no hay arista que une dos nodos de la misma capa. Por $(3.4)$, sabemos que cada arista de $G$ une nodos en la misma capa o en capas adyacentes. Nuestra suposición para el caso $(1)$ es precisamente que la primera de estas dos alternativas nunca ocurre, por lo que esto significa que cada arista se une a dos nodos en capas adyacentes. Pero nuestro procedimiento de coloreado da nodos en las capas adyacentes a los colores opuestos, por lo que cada arista tiene extremos con colores opuestos. Por lo tanto, esta coloración establece que $G$ es bipartito.
-Ahora supongamos que estamos en caso (2); ¿por qué $G$ debe contener un ciclo impar? Se nos dice que $G$ contiene una arista que une dos nodos de la misma capa. Supongamos que esta es la arista \(e = (x, y)\), con \(x, y ∈ L_{j}\). Además, por razones de notoriedad, recuerde que \(L_{0}\) ("capa 0") es el conjunto que consiste en solo $s$. Ahora considere el árbol BFS $T$ producido por nuestro algoritmo, y sea $z$ el nodo cuyo número de capa sea lo más grande posible, sujeto a la condición de que $z$ sea un antecesor de $x$ e $y$ en $T$; por razones obvias, podemos llamar $z$ el \textit{ancestro común más bajo} de $x$ e $y$. Supongamos que \(z ∈ L_{i}\), donde \(i <j\). Ahora tenemos la situación ilustrada en la Figura 10. Consideramos que el ciclo $C$ se define siguiendo el camino $z-x$ en $T$, luego la arista $e$, y luego el camino $y-z$ en $T$. El largo de este ciclo es \((j - i) + 1+ (j - i)\), agregando la longitud de sus tres partes por separado; esto es igual a \(2(j - i) + 1\), que es un número impar. $ \blacksquare $ 
+Ahora supongamos que estamos en caso (2); ¿por qué $G$ debe contener un ciclo impar? Se nos dice que $G$ contiene una arista que une dos nodos de la misma capa. Supongamos que esta es la arista \(e = (x, y)\), con \(x, y  \in  L_{j}\). Además, por razones de notoriedad, recuerde que \(L_{0}\) ("capa 0") es el conjunto que consiste en solo $s$. Ahora considere el árbol BFS $T$ producido por nuestro algoritmo, y sea $z$ el nodo cuyo número de capa sea lo más grande posible, sujeto a la condición de que $z$ sea un antecesor de $x$ e $y$ en $T$; por razones obvias, podemos llamar $z$ el \textit{ancestro común más bajo} de $x$ e $y$. Supongamos que \(z  \in  L_{i}\), donde \(i <j\). Ahora tenemos la situación ilustrada en la Figura 10. Consideramos que el ciclo $C$ se define siguiendo el camino $z-x$ en $T$, luego la arista $e$, y luego el camino $y-z$ en $T$. El largo de este ciclo es \((j - i) + 1+ (j - i)\), agregando la longitud de sus tres partes por separado; esto es igual a \(2(j - i) + 1\), que es un número impar. $ \blacksquare $ 
 
 
 \begin{figure}[h]
@@ -2113,20 +2113,20 @@ la expansión del agua en el mismo orden en que fueron descubiertas por el algor
 \subsubsection*{Implementación y tiempo de ejecución} Para concluir nuestra discusión sobre
 el algoritmo de Dijkstra, consideramos su tiempo de ejecución. Hay $n$ - 1 iteraciones del ciclo
 While para un grafo con n nodos, ya que cada iteración agrega un nuevo nodo $v$
-a $S$. Seleccionar el nodo correcto v de manera eficiente es un problema más sutil. Una primera impresión es que cada iteración debería considerar cada nodo $v$ ∈ $S$,
+a $S$. Seleccionar el nodo correcto v de manera eficiente es un problema más sutil. Una primera impresión es que cada iteración debería considerar cada nodo $v  \in  S$,
 y recorrer todas las aristas entre S y v para determinar el mínimo
-min\{$d (u)$ + $l_e$ : $e = (u, w)$, $u$ \(\in\) $S$ \}, para poder seleccionar el nodo $v$ para el cual este mínimo es el más pequeño. Para un grafo con $m$ aristas, calcular todos estos mínimos
+$\min{d (u) + l_e : e = (u, w), u \in S }$, para poder seleccionar el nodo $v$ para el cual este mínimo es el más pequeño. Para un grafo con $m$ aristas, calcular todos estos mínimos
 puede tomar tiempo $O(m)$, por lo que esto llevaría a una implementación que se ejecuta en tiempo
 $O(mn)$.\\
 
 Podemos mejorar considerablemente si utilizamos las estructuras de datos correctas. Primero nosotros
-mantendremos explícitamente los valores de los mínimos d(v) = min\{$d (u)$ + $l_e$ : $e =(u,w)$, $u$ \(\in\) $S$ \}  para cada nodo $v$ ∈ $V - S$, en lugar de volver a calcularlos en cada iteración.
+mantendremos explícitamente los valores de los mínimos $d(v) = \min{d (u) + l_e : e =(u,w), u \in  S }$  para cada nodo $v  \in  V - S$, en lugar de volver a calcularlos en cada iteración.
 Podemos mejorar aún más la eficiencia al mantener los nodos $V - S$ en una cola de prioridad con 
 $d'(v)$ como sus claves(prioridades). Las colas de prioridad se discutieron en el Capítulo 2;
 son estructuras de datos diseñadas para mantener un conjunto de $n$ elementos, cada uno con una
 prioridad asociada. Una cola de prioridad puede insertar y eliminar elementos, cambiar
 la clave de un elemento, y extraer el elemento con la clave mínima en forma eficiente. Necesitaremos
-la tercera y cuarta de las operaciones anteriores: \textit{ChangeKey} y \textit{ExtractMin}.\\
+la tercera y cuarta de las operaciones anteriores: \textit{ChangeKey} y \textit{ExtractMin}.
 
 
 ¿ Cómo implementamos el algoritmo de Dijkstra usando una cola de prioridad? Nosotros ponemos
@@ -2136,7 +2136,7 @@ cómo actualizar las claves, considere una iteración en la cual el nodo $v$ se 
 sea $w$ \(\notin\) $S$ un nodo que permanezca en la cola de prioridad.
 ¿Qué tenemos que hacer para actualizar el valor de $d'(w)$? Si $(v, w)$ no es una arista, entonces no tenemos que hacer
 nada: el conjunto de aristas considerado en el mínimo min\{$d (u)$ + $l_e$ : $e=(u,w)$, $u$ \(\in\) $S$ \} 
-es exactamente lo mismo antes y después de agregar $v$ a $S$. Si por otro lado, $e' = (v, w)$ ∈ $E$, el nuevo valor para la clave es $min (d'(w), d (v) + l_{e'})$. Si $d'(w)> d (v)$ + $l_{e'}$ entonces tenemos que usar la operación \textit{ChangeKey} para disminuir
+es exactamente lo mismo antes y después de agregar $v$ a $S$. Si por otro lado, $e' = (v, w)  \in  E$, el nuevo valor para la clave es $min (d'(w), d (v) + l_{e'})$. Si $d'(w)> d (v) + l_{e'}$ entonces tenemos que usar la operación \textit{ChangeKey} para disminuir
 la clave del nodo w apropiadamente. Esta operación \textit{ChangeKey} puede ocurrir como máximo
 una vez por arista, cuando la cola de la arista $e'$ se agrega a $S$. En resumen, tenemos
 el siguiente resultado.\\
@@ -2219,7 +2219,7 @@ Mencionamos arriba que la arista $e'$ tiene un extremo en $S$ y la otra en $V-S$
     
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{Imagenes-Seccion4/fig_4_10.PNG}
+\includegraphics[scale=0.8]{Imagenes-Seccion4/fig4_10.PNG}
 \textbf{Figura 4.10} Cambiar la arista e por la arista e' en el árbol recubridor T, según se describe en la prueba de (4.17).
 \end{figure}
     
@@ -2258,7 +2258,7 @@ Ahora considere el conjunto de aristas $T'$=$T$-\{$e$\}\(\cup\)\{$e'$\}. Argumen
     
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{Imagenes-Seccion4/fig_4_11.PNG}
+\includegraphics[scale=0.9]{Imagenes-Seccion4/fig4_11.PNG}
 \textbf{Figura 4.11} Cambiar la arista $e'$ por la arista $e$ en el árbol recubridor $T$, como se describe en la prueba de (4.20).
 \end{figure}
 
@@ -2453,7 +2453,7 @@ Al juntar estas dos observaciones, sugerimos que intentemos probar la siguiente 
 
 \textbf{Prueba}. Primero suponga que $P$ es una camino $v-w$ que consiste completamente de aristas más baratas que $e$. Si agregamos $e$ a $P$, obtenemos un ciclo en el que $e$ es la arista más cara. Por lo tanto, por la Propiedad del ciclo, $e$ no pertenece a un árbol de expansión mínimo de $G$.\\
 
-Por otro lado, supongamos que $v$ y $w$ no pueden unirse mediante un camino que consista en su totalidad en aristas más baratas que $e$. Ahora identificaremos un conjunto $S$ para el cual $e$ es la arista más barata con un extremo en $S$ y el otro en $V-S$; si podemos hacer esto, la Propiedad de Corte implicará que $e$ pertenece a cada árbol de expansión mínimo. Nuestro conjunto $S$ será el conjunto de todos los nodos a los que se puede llegar desde $v$ utilizando un camino que consta únicamente de aristas que son más baratas que $e$. Según nuestra suposición, tenemos $w∈V-S$. Además, por la definición de $S$, no puede haber una arista $f=(x,y)$ que sea más barata que $e$, y para el cual un extremo $x$ se encuentra en $S$ y el otro en $d$ y yace en $V-S$. De hecho, si existiera dicho $f$, entonces como el nodo $x$ es alcanzable desde $v$ usando solo aristas más baratas que $e$, el nodo y también sería accesible. Por lo tanto, $e$ es la arista más barata con un extremo en $S$ y el otro en $V-S$, como se desee, y así terminamos.$\blacksquare$\\
+Por otro lado, supongamos que $v$ y $w$ no pueden unirse mediante un camino que consista en su totalidad en aristas más baratas que $e$. Ahora identificaremos un conjunto $S$ para el cual $e$ es la arista más barata con un extremo en $S$ y el otro en $V-S$; si podemos hacer esto, la Propiedad de Corte implicará que $e$ pertenece a cada árbol de expansión mínimo. Nuestro conjunto $S$ será el conjunto de todos los nodos a los que se puede llegar desde $v$ utilizando un camino que consta únicamente de aristas que son más baratas que $e$. Según nuestra suposición, tenemos $w \in V-S$. Además, por la definición de $S$, no puede haber una arista $f=(x,y)$ que sea más barata que $e$, y para el cual un extremo $x$ se encuentra en $S$ y el otro en $d$ y yace en $V-S$. De hecho, si existiera dicho $f$, entonces como el nodo $x$ es alcanzable desde $v$ usando solo aristas más baratas que $e$, el nodo y también sería accesible. Por lo tanto, $e$ es la arista más barata con un extremo en $S$ y el otro en $V-S$, como se desee, y así terminamos.$\blacksquare$\\
 
 Dado este hecho, nuestro algoritmo ahora es simplemente el siguiente. Formamos un grafo $G$ al eliminar de $G$ todas las aristas de peso mayor que $C_e$ (así como también eliminamos $e$). Luego usamos uno de los algoritmos de conectividad del Capítulo 3 para determinar si hay un camino de $v$ a $w$ en $G$. La declaración (4.41) dice que $e$ pertenece a un árbol de expansión mínimo si y solo si no existe dicho camino.\\
 
@@ -2713,7 +2713,7 @@ Ahora mostramos cómo contar el número de inversiones mucho más rápidamente, 
 
 Para ayudar a contar el número de inversiones entre las dos mitades, haremos que el algoritmo ordene recursivamente los números en las dos mitades también. Hacer que el paso recursivo haga un poco más de trabajo (ordenando así como contando las inversiones) hará que la porción de "combinación" del algoritmo sea más fácil\\
 
-Entonces la rutina crucial en este proceso es Merge-and-Count. Supongamos que hemos ordenado recursivamente la primera y segunda mitad de la lista y contamos las inversiones en cada una. Ahora tenemos dos listas clasificadas A y B, que contienen la primera y la segunda mitades, respectivamente. Queremos producir una sola lista clasificada C de su unión, mientras también contamos el número de pares (a, b) con un $a∈A$, $b∈B$, y $a>b$. En nuestra discusión previa, esto es precisamente lo que necesitaremos para el paso de "combinación" que calcula el número de inversiones de la primera mitad / segunda mitad\\
+Entonces la rutina crucial en este proceso es Merge-and-Count. Supongamos que hemos ordenado recursivamente la primera y segunda mitad de la lista y contamos las inversiones en cada una. Ahora tenemos dos listas clasificadas A y B, que contienen la primera y la segunda mitades, respectivamente. Queremos producir una sola lista clasificada C de su unión, mientras también contamos el número de pares (a, b) con un $a \in A$, $b \in B$, y $a>b$. En nuestra discusión previa, esto es precisamente lo que necesitaremos para el paso de "combinación" que calcula el número de inversiones de la primera mitad / segunda mitad\\
 
 Esto está estrechamente relacionado con el problema más simple que discutimos en el Capítulo 2, que formó el paso de "combinación" correspondiente para Mergesort: allí teníamos dos listas ordenadas A y B, y queríamos fusionarlas en una sola lista ordenada en $O(n)$ hora. La diferencia aquí es que queremos hacer algo extra: no solo deberíamos producir una sola lista ordenada de $A$ y $B$, sino que también deberíamos contar el número de "pares invertidos" $(a, b)$ donde $a \in A$, $b \in B$ y $a> b$.\\
 
@@ -2789,11 +2789,11 @@ De hecho, no se conoce ningún algoritmo codicioso natural para este problema, q
 \caption{Figura 6.1 Una instancia simple de la programación de intervalos ponderados.}
 \end{figure}
 
-Usamos la notación de nuestra discusión de Programación de intervalos en la Sección 1.2. Tenemos n solicitudes etiquetadas 1,. . . , n, con cada solicitud i especificando una hora de inicio si y una hora de finalización fi. Cada intervalo i ahora también tiene un valor, o peso vi. Dos intervalos son compatibles si no se superponen. El objetivo de nuestro problema actual es seleccionar un subconjunto S ⊆ {1,. . . , n} de intervalos mutuamente compatibles, para maximizar la suma de los valores de los intervalos seleccionados,? i∈S vi.\\
+Usamos la notación de nuestra discusión de Programación de intervalos en la Sección 1.2. Tenemos n solicitudes etiquetadas 1,. . . , n, con cada solicitud i especificando una hora de inicio si y una hora de finalización fi. Cada intervalo i ahora también tiene un valor, o peso vi. Dos intervalos son compatibles si no se superponen. El objetivo de nuestro problema actual es seleccionar un subconjunto S ⊆ {1,. . . , n} de intervalos mutuamente compatibles, para maximizar la suma de los valores de los intervalos seleccionados,? $i \in S vi$.\\
 
 Supongamos que las solicitudes se ordenan en orden de no finalización: f1 ≤ f2 ≤ ... ≤ fn. Diremos una solicitud i viene antes que una j si i <j. Este será el orden natural de izquierda a derecha en el que consideraremos los intervalos. Para ayudar a hablar sobre este orden, definimos p (j), para un intervalo j, para que sea el índice más grande i <j, de tal manera que los intervalos i y j estén separados. En otras palabras, i es el intervalo más a la izquierda que termina antes de que comience j. Definimos p (j) = 0 si ninguna solicitud i <j está separada de j. Un ejemplo de la definición de p (j) se muestra en la Figura 6.2.\\
 
-Ahora, dada una instancia del problema de programación de intervalos ponderados, consideremos una solución óptima O, ignorando por ahora que no tenemos idea de lo que es. Aquí hay algo completamente obvio que podemos decir acerca de O: el intervalo n (el último) pertenece a O, o no lo hace. Supongamos que exploramos ambos lados de esta dicotomía un poco más lejos. Si n ∈ O, entonces claramente no hay intervalo indexado estrictamente entre p (n) yn puede pertenecer a O, porque según la definición de p (n), sabemos que los intervalos p (n) + 1, p (n) + 2 ,. . . , n - 1 todos los intervalos de superposición n. Además, si n ∈ O, entonces O debe incluir una solución óptima al problema que consiste en las solicitudes {1,. . . , p (n)}: si no fuera así, podríamos reemplazar la selección de solicitudes de O de {1,. . . , p (n)} con una mejor, sin peligro de
+Ahora, dada una instancia del problema de programación de intervalos ponderados, consideremos una solución óptima O, ignorando por ahora que no tenemos idea de lo que es. Aquí hay algo completamente obvio que podemos decir acerca de O: el intervalo n (el último) pertenece a O, o no lo hace. Supongamos que exploramos ambos lados de esta dicotomía un poco más lejos. Si $n  \in  O$, entonces claramente no hay intervalo indexado estrictamente entre p (n) yn puede pertenecer a O, porque según la definición de p (n), sabemos que los intervalos p (n) + 1, p (n) + 2 ,. . . , n - 1 todos los intervalos de superposición n. Además, si $n  \in  O$, entonces O debe incluir una solución óptima al problema que consiste en las solicitudes {1,. . . , p (n)}: si no fuera así, podríamos reemplazar la selección de solicitudes de O de {1,. . . , p (n)} con una mejor, sin peligro de
 solicitud superpuesta n.\\
 
 \begin{figure}[h]
@@ -2802,9 +2802,9 @@ solicitud superpuesta n.\\
 \caption{Figura 6.2 Una instancia de la programación de intervalos ponderados con las funciones p (j) definidas para cada intervalo j.}
 \end{figure}
 
-Por otro lado, si n? ∈ O, entonces O es simplemente igual a la solución óptima al problema que consiste en las solicitudes {1,. . . , n - 1}. Esto es por un razonamiento completamente análogo: suponemos que O no incluye la solicitud n; así que si no elige el conjunto óptimo de solicitudes de {1,. . . , n - 1}, podríamos reemplazarlo por uno mejor.\\
+Por otro lado, si $n \not  \in  O$, entonces O es simplemente igual a la solución óptima al problema que consiste en las solicitudes {1,. . . , n - 1}. Esto es por un razonamiento completamente análogo: suponemos que O no incluye la solicitud n; así que si no elige el conjunto óptimo de solicitudes de {1,. . . , n - 1}, podríamos reemplazarlo por uno mejor.\\
 
-Todo esto sugiere que encontrar la solución óptima en intervalos {1, 2,. . . , n} implica observar las soluciones óptimas de problemas más pequeños de la forma {1, 2,. . . , j}. Por lo tanto, para cualquier valor de j entre 1 y n, permita que Oj denote la solución óptima al problema que consiste en las solicitudes {1,. . . , j}, y deje que OPT (j) denote el valor de esta solución. (Definimos OPT (0) = 0, según la convención de que este es el óptimo en un conjunto vacío de intervalos). La solución óptima que estamos buscando es precisamente On, con el valor OPT (n). Para la solución óptima Oj en {1, 2,. . . , j}, nuestro razonamiento anterior (generalizando desde el caso en el que j = n) dice que o j ∈ Oj, en cuyo caso OPT (j) = vj + OPT (p (j)), o j? Oj, en en qué caso OPT (j) = OPT (j - 1). Dado que estas son precisamente las dos opciones posibles (j ∈ Oj o j? ∈ Oj), podemos decir además que\\
+Todo esto sugiere que encontrar la solución óptima en intervalos {1, 2,. . . , n} implica observar las soluciones óptimas de problemas más pequeños de la forma {1, 2,. . . , j}. Por lo tanto, para cualquier valor de j entre 1 y n, permita que Oj denote la solución óptima al problema que consiste en las solicitudes {1,. . . , j}, y deje que OPT (j) denote el valor de esta solución. (Definimos OPT (0) = 0, según la convención de que este es el óptimo en un conjunto vacío de intervalos). La solución óptima que estamos buscando es precisamente On, con el valor OPT (n). Para la solución óptima Oj en {1, 2,. . . , j}, nuestro razonamiento anterior (generalizando desde el caso en el que j = n) dice que o $j  \in  Oj$, en cuyo caso OPT (j) = vj + OPT (p (j)), o j? Oj, en en qué caso OPT (j) = OPT (j - 1). Dado que estas son precisamente las dos opciones posibles ($j  \in  Oj o j?  \in  Oj$), podemos decir además que\\
 
 
 \colorbox{mygray}{\parbox{15cm}{
@@ -2968,7 +2968,7 @@ Un objetivo natural es entonces encontrar la línea con el mínimo error; esto r
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_1.PNG}
-\end{figure}\\
+\end{figure}
 
 Ahora, aquí hay un tipo de problema que estas fórmulas no fueron diseñadas para cubrir. A menudo tenemos datos que se parecen en algo a la imagen de la Figura 6.7. En este caso, nos gustaría hacer una afirmación como: "Los puntos se encuentran aproximadamente en una secuencia de dos líneas". ¿Cómo podríamos formalizar este concepto?\\
 
@@ -3004,13 +3004,10 @@ Para empezar, debemos recordar los ingredientes que necesitamos para un algoritm
 Para los mínimos cuadrados segmentados, la siguiente observación es muy útil: el último punto pn pertenece a un solo segmento en la partición óptima, y ​​ese segmento comienza en algún punto anterior pi. Este es el tipo de observación que puede sugerir el conjunto correcto de subproblemas: si conociéramos la identidad del último segmento pi, ..., pn (ver Figura 6.9), podríamos eliminar esos puntos de la consideración y resolver el problema recursivamente en los puntos restantes p1, ..., pi − 1.\\
 
 
-\begin{wrapfigure}
-
-\centering
-\includegraphics[scale=1]{Imagenes-Seccion6/fig6_9.PNG}
-\caption{Figura 6.9 Una posible solución: un solo segmento de línea se ajusta a los puntos pi, pi + 1, ..., pn, y luego se encuentra una solución óptima para los puntos restantes p1, p2, ..., pi − 1.}
-
-\end{wrapfigure}
+\begin{figure}
+\includegraphics[scale=1.0]{Imagenes-Seccion6/fig6_9.PNG}
+\caption{\label{Figura 6.9} Una posible solución: un solo segmento de línea se ajusta a los puntos pi, pi + 1, ..., pn, y luego se encuentra una solución óptima para los puntos restantes p1, p2, ..., pi − 1.}
+\end{figure}
 
 Supongamos que dejamos que OPT (i) denote la solución óptima para los puntos p1, ..., pi, y dejamos que ei, j denote el error mínimo de cualquier línea con respecto a pi, pi + 1, ..., pj. (Escribiremos OPT (0) = 0 como un caso de límite). Luego, nuestra observación anterior dice lo siguiente.\\
 
@@ -3027,7 +3024,7 @@ La parte difícil en el diseño del algoritmo ahora está detrás de nosotros. A
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_5.PNG}
-\end{figure}\\
+\end{figure}
 
 Por analogía con los argumentos para la programación de intervalos ponderados, la exactitud de este algoritmo se puede probar directamente por inducción, con (6.7) proporcionando el paso de inducción.\\
 
@@ -3036,7 +3033,7 @@ Y como en nuestro algoritmo para la programación de intervalos ponderados, pode
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_6.PNG}
-\end{figure}\\
+\end{figure}
 
 \subsubsection*{Analizando el algoritmo}
 
@@ -3067,11 +3064,11 @@ El objetivo de esta sección es mostrar cómo usar la programación dinámica pa
 
 \textbf{Un comienzo falso} Una estrategia general, que funcionó para nosotros en el caso de la Programación de intervalos ponderados, es considerar los subproblemas que involucran solo las primeras solicitudes i. Comenzamos probando esta estrategia aquí. Usamos la notación OPT (i), análogamente a la notación usada antes, para denotar la mejor solución posible utilizando un subconjunto de las solicitudes {1,. . . , yo}. La clave de nuestro método para el problema de programación de intervalos ponderados fue concentrarse en una solución óptima O a nuestro problema y considerar dos casos, dependiendo de si la última solicitud n es aceptada o rechazada por esta solución óptima. Al igual que en ese caso, tenemos la primera parte, que sigue inmediatamente a la definición de OPT (i).\\
 
-. Si n? ∈ O, entonces OPT (n) = OPT (n - 1).\\
+. Si $n \not  \in  O$, entonces OPT (n) = OPT (n - 1).\\
 
-A continuación, debemos considerar el caso en el que n ∈ O. Lo que nos gustaría aquí es una simple recursión, que nos indica el mejor valor posible que podemos obtener para las soluciones que contienen la última solicitud n. Para la Programación de intervalos ponderados, esto fue fácil, ya que simplemente podríamos eliminar cada solicitud que estuviera en conflicto con la solicitud n. En el problema actual, esto no es tan simple. Aceptar la solicitud n no implica de manera inmediata que tenemos que rechazar cualquier otra solicitud. En cambio, significa que para el subconjunto de solicitudes S ⊆ {1,. . . , n - 1} que aceptaremos, nos queda menos peso disponible: se utiliza un peso de wn en la solicitud aceptada n, y solo nos queda un peso W - wn para el conjunto S de solicitudes restantes que aceptamos. Vea la Figura 6.10.\\
+A continuación, debemos considerar el caso en el que $n  \in  O$. Lo que nos gustaría aquí es una simple recursión, que nos indica el mejor valor posible que podemos obtener para las soluciones que contienen la última solicitud n. Para la Programación de intervalos ponderados, esto fue fácil, ya que simplemente podríamos eliminar cada solicitud que estuviera en conflicto con la solicitud n. En el problema actual, esto no es tan simple. Aceptar la solicitud n no implica de manera inmediata que tenemos que rechazar cualquier otra solicitud. En cambio, significa que para el subconjunto de solicitudes S ⊆ {1,. . . , n - 1} que aceptaremos, nos queda menos peso disponible: se utiliza un peso de wn en la solicitud aceptada n, y solo nos queda un peso W - wn para el conjunto S de solicitudes restantes que aceptamos. Vea la Figura 6.10.\\
 
-\textbf{Una solución mejor} Esto sugiere que necesitamos más subproblemas: para averiguar el valor de OPT (n) no solo necesitamos el valor de OPT (n - 1), sino que también necesitamos saber la mejor solución que podemos obtener utilizando un subconjunto de los primeros n - 1 artículos y peso total permitido W - wn. Por lo tanto, vamos a utilizar muchos más subproblemas: uno para cada conjunto inicial {1,. . . , i} de los artículos, y cada valor posible para el peso disponible restante w. Supongamos que W es un número entero, y todas las solicitudes i = 1,. . . , n tienen pesos enteros wi. Tendremos un subproblema para cada i = 0, 1,. . . , ny cada entero 0 ≤ w ≤ W. Usaremos OPT (i, w) para indicar el valor de la solución óptima utilizando un subconjunto de los elementos {1,. . . , i} con el peso máximo permitido w, es decir, donde el máximo está sobre los subconjuntos S ⊆ {1,. . . , i} que satisfacen? j∈S wj ≤ w. Usando este nuevo conjunto de subproblemas, podremos expresar el valor OPT (i, w) como una expresión simple en términos de valores de problemas más pequeños. Además, OPT (n, W) es la cantidad que estamos buscando al final. Como antes, deje que O denote una solución óptima para el problema original.\\
+\textbf{Una solución mejor} Esto sugiere que necesitamos más subproblemas: para averiguar el valor de OPT (n) no solo necesitamos el valor de OPT (n - 1), sino que también necesitamos saber la mejor solución que podemos obtener utilizando un subconjunto de los primeros n - 1 artículos y peso total permitido W - wn. Por lo tanto, vamos a utilizar muchos más subproblemas: uno para cada conjunto inicial {1,. . . , i} de los artículos, y cada valor posible para el peso disponible restante w. Supongamos que W es un número entero, y todas las solicitudes i = 1,. . . , n tienen pesos enteros wi. Tendremos un subproblema para cada i = 0, 1,. . . , ny cada entero 0 ≤ w ≤ W. Usaremos OPT (i, w) para indicar el valor de la solución óptima utilizando un subconjunto de los elementos {1,. . . , i} con el peso máximo permitido w, es decir, donde el máximo está sobre los subconjuntos S ⊆ {1,. . . , i} que satisfacen? $j \in S$ $wj ≤ w$. Usando este nuevo conjunto de subproblemas, podremos expresar el valor OPT (i, w) como una expresión simple en términos de valores de problemas más pequeños. Además, OPT (n, W) es la cantidad que estamos buscando al final. Como antes, deje que O denote una solución óptima para el problema original.\\
 
 
 \begin{figure}[h]
@@ -3082,11 +3079,11 @@ A continuación, debemos considerar el caso en el que n ∈ O. Lo que nos gustar
 
 $OPT(i,w) = \max_s \sum_{j \in S} w_j$\\
 
-donde el máximo está sobre los subconjuntos S ⊆ {1,. . . , i} que satisfacen? j∈S wj ≤ w. Usando este nuevo conjunto de subproblemas, podremos expresar el valor OPT (i, w) como una expresión simple en términos de valores de problemas más pequeños. Además, OPT (n, W) es la cantidad que estamos buscando al final. Como antes, deje que O denote una solución óptima para el problema original.\\
+donde el máximo está sobre los subconjuntos S ⊆ {1,. . . , i} que satisfacen? $j \in S$ wj ≤ w. Usando este nuevo conjunto de subproblemas, podremos expresar el valor OPT (i, w) como una expresión simple en términos de valores de problemas más pequeños. Además, OPT (n, W) es la cantidad que estamos buscando al final. Como antes, deje que O denote una solución óptima para el problema original.\\
 
 \begin{itemize}
-    \item Si n? ∈ O, entonces OPT (n, W) = OPT (n - 1, W), ya que simplemente podemos ignorar el elemento n
-    \item Si n ∈ O, entonces OPT (n, W) = wn + OPT (n - 1, W - wn), ya que ahora buscamos utilizar la capacidad restante de W - wn de manera óptima en los elementos 1, 2,. . . , n - 1.
+    \item Si $n \not  \in  O$, entonces OPT (n, W) = OPT (n - 1, W), ya que simplemente podemos ignorar el elemento n
+    \item Si $n  \in  O$, entonces OPT (n, W) = wn + OPT (n - 1, W - wn), ya que ahora buscamos utilizar la capacidad restante de W - wn de manera óptima en los elementos 1, 2,. . . , n - 1.
 \end{itemize}
 
 Cuando el enésimo artículo es demasiado grande, es decir, W <wn, entonces debemos tener OPT (n, W) = OPT (n - 1, W). De lo contrario, obtendremos la solución óptima permitiendo todas las n solicitudes al aprovechar estas dos opciones. Usando la misma línea de argumento para el subproblema para los elementos {1,. . . , i}, y el peso máximo permitido w, nos da la siguiente recurrencia.\\
@@ -3100,13 +3097,13 @@ Como antes, queremos diseñar un algoritmo que construya una tabla de todos los 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_7.PNG}
-\end{figure}\\
+\end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/fig6_11.PNG}
 \caption{Figura 6.11 La tabla bidimensional de valores OPT. La columna de la izquierda y la fila inferior siempre son 0. La entrada para OPT (i, w) se calcula a partir de las otras dos entradas OPT (i - 1, w) y OPT (i - 1, w - wi), según lo indicado por flechas}
-\end{figure}\\
+\end{figure}
 
 Usando (6.8), se puede probar inmediatamente por inducción que el valor devuelto M [n, W] es el valor de solución óptimo para las solicitudes 1,. . . , n y peso disponible W\\
 
@@ -3122,7 +3119,7 @@ A continuación nos preocuparemos por el tiempo de ejecución de este algoritmo.
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/fig6_12.PNG}
 \caption{Figura 6.12 Las iteraciones del algoritmo en una instancia de muestra del problema de suma de subconjuntos}
-\end{figure}\\
+\end{figure}
 
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.9)} El algoritmo de suma de subconjuntos (n, W) calcula correctamente el valor óptimo del problema y se ejecuta en tiempo O (nW)}}\\
@@ -3136,13 +3133,13 @@ Para recuperar un conjunto S óptimo de elementos, podemos rastrear a través de
 
 \subsubsection*{Extensión: El problema de la mochila}
 
-El problema de la mochila es un poco más complejo que el problema de la programación que discutimos anteriormente. Considere una situación en la que cada artículo i tiene un peso no negativo wi como antes, y también un valor distinto vi. ¿Nuestro objetivo ahora es encontrar un subconjunto S de máximo valor? i∈S vi, sujeto a la restricción de que el peso total del conjunto no debe exceder de W:? es wi ≤ W.\\
+El problema de la mochila es un poco más complejo que el problema de la programación que discutimos anteriormente. Considere una situación en la que cada artículo i tiene un peso no negativo wi como antes, y también un valor distinto vi. ¿Nuestro objetivo ahora es encontrar un subconjunto S de máximo valor? $i \in S$ vi, sujeto a la restricción de que el peso total del conjunto no debe exceder de W:? es wi ≤ W.\\
 
-No es difícil extender nuestro algoritmo de programación dinámica a este problema más general. Usamos el conjunto análogo de subproblemas, OPT (i, w), para denotar el valor de la solución óptima utilizando un subconjunto de los elementos {1,. . . , i} y peso máximo disponible w. Consideramos una solución óptima O, e identificamos dos casos dependiendo de si n ∈ O.\\
+No es difícil extender nuestro algoritmo de programación dinámica a este problema más general. Usamos el conjunto análogo de subproblemas, OPT (i, w), para denotar el valor de la solución óptima utilizando un subconjunto de los elementos {1,. . . , i} y peso máximo disponible w. Consideramos una solución óptima O, e identificamos dos casos dependiendo de si $n  \in  O$.\\
 
 \begin{itemize}
-    \item If n ∈ O, then OPT(n, W) = OPT(n − 1, W).
-    \item If n ∈ O, then OPT(n, W) = vn + OPT(n − 1, W − wn).
+    \item If $n \not \in O$, then $OPT(n, W) = OPT(n − 1, W)$ (revisar).
+    \item Si $n  \in  O$, entonces $OPT(n, W) = vn + OPT(n − 1, W − wn)$.
 \end{itemize}
 
 El uso de esta línea de argumentación para los subproblemas implica el siguiente análogo de (6.8).\\
@@ -3166,7 +3163,7 @@ Hay algunos problemas canónicos que se ajustan a este perfil; Aquellos de usted
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/fig6_13.PNG}
 \caption{Figura 6.13 Una estructura secundaria de RNA. Las líneas gruesas conectan elementos adyacentes de la secuencia; las líneas finas indican pares de elementos que están emparejados}
-\end{figure}\\
+\end{figure}
 
 \subsubsection*{El problema}
 
@@ -3174,12 +3171,12 @@ A medida que uno aprende en las clases de biología introductoria, Watson y Cric
 
 Ahora, las moléculas de ARN monocatenario son componentes clave en muchos de los procesos que se desarrollan dentro de una célula y siguen más o menos los mismos principios estructurales. Sin embargo, a diferencia del ADN de doble cadena, no hay una "segunda cadena" para que el ARN se adhiera; por lo tanto, tiende a retroceder y formar pares de bases consigo mismo, dando como resultado formas interesantes como la que se muestra en la Figura 6.13. El conjunto de pares (y la forma resultante) formado por la molécula de ARN a través de este proceso se denomina estructura secundaria, y comprender la estructura secundaria es esencial para comprender el comportamiento de la molécula.\\
 
-Para nuestros propósitos, una molécula de ARN de una sola hebra puede verse como una secuencia de n símbolos (bases) extraídos del alfabeto {A, C, G, U}\footnote{Tenga en cuenta que el símbolo del alfabeto de ADN ha sido reemplazado por una U, pero este no es importante para nosotros aquí}. Sea B = b1b2 ... bn una molécula de ARN monocatenaria, donde cada bi ∈ {A, C, G, U}. A una primera aproximación, uno puede modelar su estructura secundaria de la siguiente manera. Como de costumbre, requerimos que A se empareje con U, y C se empareje con G; también requerimos que cada base pueda emparejarse como máximo con otra base; en otras palabras, el conjunto de pares de bases forma una coincidencia. También resulta que las estructuras secundarias son (de nuevo, en una primera aproximación) "sin nudos", que formalizaremos como una especie de condición de no cruzamiento a continuación.\\
+Para nuestros propósitos, una molécula de ARN de una sola hebra puede verse como una secuencia de n símbolos (bases) extraídos del alfabeto {A, C, G, U}\footnote{Tenga en cuenta que el símbolo del alfabeto de ADN ha sido reemplazado por una U, pero este no es importante para nosotros aquí}. Sea B = b1b2 ... bn una molécula de ARN monocatenaria, donde cada $bi  \in  {A, C, G, U}$. A una primera aproximación, uno puede modelar su estructura secundaria de la siguiente manera. Como de costumbre, requerimos que A se empareje con U, y C se empareje con G; también requerimos que cada base pueda emparejarse como máximo con otra base; en otras palabras, el conjunto de pares de bases forma una coincidencia. También resulta que las estructuras secundarias son (de nuevo, en una primera aproximación) "sin nudos", que formalizaremos como una especie de condición de no cruzamiento a continuación.\\
 
-Así, en concreto, decimos que una estructura secundaria en B es un conjunto de pares S = {(i, j)}, donde i, j ∈ {1, 2,. . . , n}, que satisface las siguientes condiciones.\\
+Así, en concreto, decimos que una estructura secundaria en B es un conjunto de pares S = {(i, j)}, donde $i, j  \in  {1, 2,. . . , n}$, que satisface las siguientes condiciones.\\
 
 \begin{itemize}
-    \item (No hay giros bruscos). Los extremos de cada par en S están separados por al menos cuatro bases intermedias; es decir, si (i, j) ∈ S, entonces i <j - 4.
+    \item (No hay giros bruscos). Los extremos de cada par en S están separados por al menos cuatro bases intermedias; es decir, si $(i, j)  \in  S$, entonces i <j - 4.
     \item Los elementos de cualquier par en S consisten en {A, U} o {C, G} (en cualquier orden).
     \item S es una coincidencia: no aparece ninguna base en más de un par.
     \item (La condición de no cruce). Si (i, j) y (k,?) son dos pares en S, entonces no podemos tener i <k <j <?. (Vea la Figura 6.14 para una ilustración).
@@ -3241,7 +3238,7 @@ Ahora solo tenemos que asegurarnos de que entendemos el orden correcto para cons
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/fig6_16.PNG}
-\caption{Figura 6.16 Las iteraciones del algoritmo en una instancia de muestra del problema de predicción de la estructura secundaria del ARN.}\\
+\caption{Figura 6.16 Las iteraciones del algoritmo en una instancia de muestra del problema de predicción de la estructura secundaria del ARN.}
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_8.PNG}
 \end{figure}
 
@@ -3299,28 +3296,28 @@ Todo esto nos deja con la misma pregunta que hicimos inicialmente, mientras escr
 
 A principios de la década de 1970, los dos biólogos moleculares Needleman y Wunsch propusieron una definición de similitud, que, básicamente, sin cambios, se ha convertido en la definición estándar actualmente en uso. Su posición como estándar se vio reforzada por su simplicidad y su atractivo intuitivo, así como a través de su descubrimiento independiente por varios otros investigadores casi al mismo tiempo. Además, esta definición de similitud vino con un algoritmo de programación dinámico eficiente para computarlo. De esta manera, el paradigma de la programación dinámica fue descubierto independientemente por los biólogos unos veinte años después de que los matemáticos y los científicos informáticos lo articularon por primera vez.\\
 
-La definición está motivada por las consideraciones que discutimos anteriormente, y en particular por la noción de "alinear" dos cadenas. Supongamos que nos dan dos cadenas X e Y, donde X consiste en la secuencia de símbolos x1x2 ... xm e Y consiste en la secuencia de símbolos y1y2 ... yn. Considera los conjuntos {1, 2,. . . , m} y {1, 2,. . . , n} como representación de las diferentes posiciones en las cadenas X e Y, y considera una coincidencia de estos conjuntos; recuerde que una coincidencia es un conjunto de pares ordenados con la propiedad en la que cada elemento aparece como máximo un par. Decimos que una M coincidente de estos dos conjuntos es una alineación si no hay pares "cruzados": si (i, j), (i, j) ∈ M e i <i, entonces j <j. Intuitivamente, una alineación permite alinear las dos cuerdas, al decirnos qué pares de posiciones se alinearán entre sí. Así, por ejemplo, \\
+La definición está motivada por las consideraciones que discutimos anteriormente, y en particular por la noción de "alinear" dos cadenas. Supongamos que nos dan dos cadenas X e Y, donde X consiste en la secuencia de símbolos x1x2 ... xm e Y consiste en la secuencia de símbolos y1y2 ... yn. Considera los conjuntos {1, 2,. . . , m} y {1, 2,. . . , n} como representación de las diferentes posiciones en las cadenas X e Y, y considera una coincidencia de estos conjuntos; recuerde que una coincidencia es un conjunto de pares ordenados con la propiedad en la que cada elemento aparece como máximo un par. Decimos que una M coincidente de estos dos conjuntos es una alineación si no hay pares "cruzados": si $(i, j), (i, j)  \in  M$ e $i <i$, entonces $j <j$. Intuitivamente, una alineación permite alinear las dos cuerdas, al decirnos qué pares de posiciones se alinearán entre sí. Así, por ejemplo, \\
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_12.PNG}
-\end{figure}\\
+\end{figure}
 
 corresponde a la alineación {(2, 1), (3, 2), (4, 3)}.\\
 
-Nuestra definición de similitud se basará en encontrar la alineación óptima entre X e Y, de acuerdo con los siguientes criterios. Supongamos que M es una alineación dada entre X e Y. Primero, hay un parámetro δ> 0 que define una penalización por hueco. Para cada posición de X o Y que no coincida con M, es un hueco, incurrimos en un costo de δ.\\
+Nuestra definición de similitud se basará en encontrar la alineación óptima entre X e Y, de acuerdo con los siguientes criterios. Supongamos que M es una alineación dada entre X e Y. Primero, hay un parámetro $\delta > 0$ que define una penalización por hueco. Para cada posición de X o Y que no coincida con M, es un hueco, incurrimos en un costo de $\delta$.\\
 
 Nuestra definición de similitud se basará en encontrar la alineación óptima entre X e Y, de acuerdo con los siguientes criterios. Supongamos que M es una alineación dada entre X e Y.\\
 
 \begin{itemize}
-    \item Primero, hay un parámetro δ> 0 que define una penalización por hueco. Para cada posición de X o Y que no coincida con M, es un hueco, incurrimos en un costo de δ.
+    \item Primero, hay un parámetro $\delta> 0$ que define una penalización por hueco. Para cada posición de X o Y que no coincida con M, es un hueco, incurrimos en un costo de $\delta$.
 
-\item En segundo lugar, para cada par de letras p, q en nuestro alfabeto, hay un costo de falta de coincidencia de αpq para alinear p con q. Por lo tanto, para cada (i, j) ∈ M, pagamos el costo de desajuste apropiado αxiyj para alinear xi con yj. En general, se supone que αpp = 0 para cada letra p (no hay un costo de falta de coincidencia para alinear una letra con otra copia de sí misma), aunque esto no será necesario en nada de lo que sigue.
+\item En segundo lugar, para cada par de letras p, q en nuestro alfabeto, hay un costo de falta de coincidencia de $ \alpha pq$ para alinear p con q. Por lo tanto, para cada $(i, j)  \in  M$, pagamos el costo de desajuste apropiado $\alpha x _iyj$ para alinear xi con yj. En general, se supone que $\alpha pp = 0$ para cada letra p (no hay un costo de falta de coincidencia para alinear una letra con otra copia de sí misma), aunque esto no será necesario en nada de lo que sigue.
 
 \item El costo de M es la suma de sus costos de brecha y desajuste, y buscamos una alineación del costo mínimo.
 \end{itemize}
 
-El proceso de minimizar este costo a menudo se denomina alineación de secuencias en la literatura de biología. Las cantidades δ y {αpq} son parámetros externos que deben conectarse al software para la alineación de secuencias; De hecho, se requiere mucho trabajo para elegir la configuración de estos parámetros. Desde nuestro punto de vista, al diseñar un algoritmo para la alineación de secuencias, los tomaremos como se indican. Para volver a nuestro primer ejemplo, observe cómo estos parámetros determinan qué alineación de ocurrencia y ocurrencia deberíamos preferir: la primera es estrictamente mejor si y solo si δ + αae <3δ\\
+El proceso de minimizar este costo a menudo se denomina alineación de secuencias en la literatura de biología. Las cantidades $\delta$ y ${\alpha pq}$ son parámetros externos que deben conectarse al software para la alineación de secuencias; De hecho, se requiere mucho trabajo para elegir la configuración de estos parámetros. Desde nuestro punto de vista, al diseñar un algoritmo para la alineación de secuencias, los tomaremos como se indican. Para volver a nuestro primer ejemplo, observe cómo estos parámetros determinan qué alineación de ocurrencia y ocurrencia deberíamos preferir: la primera es estrictamente mejor si y solo si $\delta + \alpha a e < \varepsilon \delta$\\
 
 
 \subsubsection*{Diseñando el algoritmo}
@@ -3329,41 +3326,41 @@ Ahora tenemos una definición numérica concreta para la similitud entre las cad
 
 Uno de los enfoques que podríamos probar para este problema es la programación dinámica, y nos motiva la siguiente dicotomía básica.\\
 \begin{itemize}
-    \item  En la alineación óptima M, ya sea (m, n) ∈ M o (m, n)? ∈ M. (Es decir, o los últimos símbolos de las dos cadenas se corresponden entre sí, o no lo están).
+    \item  En la alineación óptima M, ya sea $(m, n)  \in  M o (m, n)?  \in  M$. (Es decir, o los últimos símbolos de las dos cadenas se corresponden entre sí, o no lo están).
 \end{itemize}
 
 Por sí mismo, este hecho sería demasiado débil para proporcionarnos una solución de programación dinámica. Supongamos, sin embargo, que lo combinamos con el siguiente hecho básico.\\
 
-\textbf{(6.14)} Sea M una alineación de X e Y. Si (m, n)? ∈ M, entonces la posición mth de X o la nth posición de Y no coinciden en M.\\
+\textbf{(6.14)} Sea M una alineación de X e Y. Si $(m, n)?  \in  M$, entonces la posición mth de X o la nth posición de Y no coinciden en M.\\
 
-Prueba. Supongamos, a modo de contradicción, que (m, n)? ∈ M, y hay números i <m y j <n, de modo que (m, j) ∈ M y (i, n) M. Pero esto contradice nuestra definición de alineación: tenemos (i, n), (m, j) ∈ M con i <m, pero n> i, por lo que los pares (i, n) y (m, j) se cruzan.\\
+Prueba. Supongamos, a modo de contradicción, que $(m, n)?  \in  M$, y hay números i <m y j <n, de modo que $(m, j)  \in  M$ y $(i, n) M$. Pero esto contradice nuestra definición de alineación: tenemos $(i, n), (m, j)  \in  M$ con i <m, pero n> i, por lo que los pares (i, n) y (m, j) se cruzan.\\
 
 Hay una forma equivalente de escribir (6.14) que expone tres posibilidades alternativas y conduce directamente a la formulación de una recurrencia.\\
 
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.15)} En una alineación óptima M, al menos uno de los siguientes es verdadero:
 \begin{itemize}
-    \item (m, n) ∈ M; o
+    \item $(m, n)  \in  M$; o
     \item la posición mth de X no coincide; o
     \item la posición n de Y no coincide.
 \end{itemize}}}
 
-Ahora, deje que OPT (i, j) denote el costo mínimo de una alineación entre x1x2 ... xi y y1y2 ... yj. Si se cumple el caso (i) de (6.15), pagamos αxmyn y luego alineamos x1x2 ... xm − 1 lo mejor posible con y1y2 ... yn − 1; obtenemos OPT (m, n) = αxmyn + OPT (m - 1, n - 1). Si el caso (ii) se mantiene, pagamos un costo de brecha de δ ya que la posición mth de X no coincide, y luego alineamos x1x2 ... xm − 1 lo mejor posible con y1y2 ... yn. De esta manera, obtenemos OPT (m, n) = δ + OPT (m - 1, n).\\
+Ahora, deje que OPT (i, j) denote el costo mínimo de una alineación entre x1x2 ... xi y y1y2 ... yj. Si se cumple el caso (i) de (6.15), pagamos $\alpha x myn$ y luego alineamos x1x2 ... xm − 1 lo mejor posible con y1y2 ... yn − 1; obtenemos $OPT (m, n) =  \alpha xmyn + OPT (m - 1, n - 1)$. Si el caso (ii) se mantiene, pagamos un costo de brecha de $\delta$ ya que la posición mth de X no coincide, y luego alineamos x1x2 ... xm − 1 lo mejor posible con y1y2 ... yn. De esta manera, obtenemos $OPT (m, n) =  \delta  + OPT (m - 1, n)$.\\
 
-De manera similar, si el caso (iii) es válido, obtenemos OPT (m, n) = δ + OPT (m, n - 1). Usando el mismo argumento para el subproblema de encontrar la alineación de costo mínimo entre x1x2 ... xi y y1y2 ... yj, obtenemos el siguiente hecho.\\
+De manera similar, si el caso (iii) es válido, obtenemos $OPT (m, n) =  \delta  + OPT (m, n - 1)$. Usando el mismo argumento para el subproblema de encontrar la alineación de costo mínimo entre x1x2 ... xi y y1y2 ... yj, obtenemos el siguiente hecho.\\
 
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.16)} Los costos mínimos de alineación satisfacen la siguiente recurrencia para i ≥ 1 y j ≥ 1:
-OPT (i, j) = min [αxiyj + OPT (i - 1, j - 1), δ + OPT (i - 1, j), δ + OPT (i, j - 1)]. Además, (i, j) está en una alineación óptima M para este subproblema si y solo si el mínimo se alcanza con el primero de estos valores.}}\\
+$OPT (i, j) = min [ \alpha xiyj + OPT (i - 1, j - 1),  \delta  + OPT (i - 1, j),  \delta  + OPT (i, j - 1)]$. Además, (i, j) está en una alineación óptima M para este subproblema si y solo si el mínimo se alcanza con el primero de estos valores.}}\\
 
-Nos hemos movido hacia una posición en la que el algoritmo de programación dinámica se ha vuelto claro: acumulamos los valores de OPT (i, j) usando la recurrencia en (6.16). Solo hay subproblemas O (mn), y OPT (m, n) es el valor que estamos buscando.\\
+Nos hemos movido hacia una posición en la que el algoritmo de programación dinámica se ha vuelto claro: acumulamos los valores de OPT (i, j) usando la recurrencia en (6.16). Solo hay subproblemas $O(mn)$, y $OPT (m, n)$ es el valor que estamos buscando.\\
 
-Ahora especificamos el algoritmo para calcular el valor de la alineación óptima. Para propósitos de inicialización, notamos que OPT (i, 0) = OPT (0, i) = iδ para todo i, ya que la única manera de alinear una palabra i-letter con una palabra 0-letter es usar i gaps\\
+Ahora especificamos el algoritmo para calcular el valor de la alineación óptima. Para propósitos de inicialización, notamos que $OPT (i, 0) = OPT (0, i) = i \delta $ para todo i, ya que la única manera de alinear una palabra i-letter con una palabra 0-letter es usar i gaps\\
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Imagenes-Seccion6/cod6_13.PNG}
-\end{figure}\\
+\end{figure}
 
 Al igual que en los algoritmos de programación dinámica anteriores, podemos rastrear a través de la matriz A, utilizando la segunda parte del hecho (6.16), para construir la propia alineación.\\
 
@@ -3379,7 +3376,7 @@ La corrección del algoritmo se deriva directamente de (6.16). El tiempo de ejec
 
 Hay una forma pictórica atractiva en la que las personas piensan acerca de este algoritmo de alineación de secuencias. Supongamos que construimos un gráfico de cuadrícula m × n GXY, con las filas marcadas con símbolos en la cadena X, las columnas etiquetadas con símbolos en Y, y los bordes dirigidos como en la Figura 6.17.\\
 
-Numeramos las filas de 0 a my las columnas de 0 a n; Denotamos el nodo en la fila i th y la columna j th por la etiqueta (i, j). Ponemos los costos en los bordes de GXY: el costo de cada borde horizontal y vertical es, y el costo del borde diagonal de (i - 1, j - 1) a (i, j) es αxiyj.\\
+Numeramos las filas de 0 a my las columnas de 0 a n; Denotamos el nodo en la fila i th y la columna j th por la etiqueta (i, j). Ponemos los costos en los bordes de GXY: el costo de cada borde horizontal y vertical es, y el costo del borde diagonal de (i - 1, j - 1) a (i, j) es $ \alpha xiyj$.\\
 
 El propósito de esta imagen ahora surge: la recurrencia en (6.16) para OPT (i, j) es precisamente la recurrencia que se obtiene para la ruta de costo mínimo en GXY desde (0, 0) hasta (i, j). Así podemos mostrar\\
 
@@ -3389,7 +3386,7 @@ El propósito de esta imagen ahora surge: la recurrencia en (6.16) para OPT (i, 
 
 Prueba. Podemos demostrarlo fácilmente por inducción en i + j. Cuando i + j = 0, tenemos i = j = 0, y de hecho f (i, j) = OPT (i, j) = 0. Ahora considere los valores arbitrarios de i y j, y suponga que la afirmación es verdadera para todos pares (i, j) con i + j <i + j. El último borde en la ruta más corta hacia (i, j) es desde (i - 1, j - 1), (i - 1, j) o (i, j - 1). Asi tenemos\\
 
-  $f (i, j) = min [αxiyj + f (i - 1, j - 1), δ + f (i - 1, j), δ + f (i, j - 1)] = min [αxiyj + OPT (i - 1, j - 1), δ + OPT (i - 1, j), δ + OPT (i, j - 1)] = OPT (i, j)$, donde pasamos de la primera línea a la segunda utilizando la hipótesis de inducción, y pasamos de la segunda a la tercera utilizando (6.16). $\blacksquare$\\
+  $f (i, j) = min [ \alpha xiyj + f (i - 1, j - 1),  \delta  + f (i - 1, j),  \delta  + f (i, j - 1)] = min [ \alpha xiyj + OPT (i - 1, j - 1),  \delta  + OPT (i - 1, j),  \delta  + OPT (i, j - 1)] = OPT (i, j)$, donde pasamos de la primera línea a la segunda utilizando la hipótesis de inducción, y pasamos de la segunda a la tercera utilizando (6.16). $\blacksquare$\\
 
 Por lo tanto, el valor de la alineación óptima es la longitud de la ruta más corta en GXY desde (0, 0) hasta (m, n). (Llamaremos a cualquier ruta en GXY desde (0, 0) a (m, n) una ruta de esquina a esquina). Además, los bordes diagonales utilizados en una ruta más corta corresponden exactamente a los pares utilizados en un mínimo Alineación de costos. Estas conexiones al problema de ruta más corta en el gráfico GXY no producen directamente una mejora en el tiempo de ejecución para el problema de alineación de secuencias; sin embargo, sí ayudan a la intuición del problema y han sido útiles para sugerir algoritmos para variaciones más complejas en la alineación de secuencias.\\
 
@@ -3399,7 +3396,7 @@ Por lo tanto, el valor de la alineación óptima es la longitud de la ruta más 
 \caption{Figura 6.18 Los valores OPT para el problema de alinear las palabras significan para nombrar}
 \end{figure}
 
-Para un ejemplo, la Figura 6.18 muestra el valor de la ruta más corta desde (0, 0) a cada nodo (i, j) para el problema de alinear el significado y el nombre de las palabras. Para el propósito de este ejemplo, asumimos que δ = 2; igualar una vocal con una vocal diferente, o una consonante con una consonante diferente, cuesta 1; mientras que unir una vocal y una consonante cuesta 3. Para cada celda de la tabla (que representa el nodo correspondiente), la flecha indica el último paso del camino más corto que conduce a ese nodo; en otras palabras, la forma en que el mínimo Se logra en (6.16). Por lo tanto, siguiendo las flechas hacia atrás desde el nodo (4, 4), podemos rastrear para construir la alineación\\
+Para un ejemplo, la Figura 6.18 muestra el valor de la ruta más corta desde (0, 0) a cada nodo (i, j) para el problema de alinear el significado y el nombre de las palabras. Para el propósito de este ejemplo, asumimos que $ \delta =2$; igualar una vocal con una vocal diferente, o una consonante con una consonante diferente, cuesta 1; mientras que unir una vocal y una consonante cuesta 3. Para cada celda de la tabla (que representa el nodo correspondiente), la flecha indica el último paso del camino más corto que conduce a ese nodo; en otras palabras, la forma en que el mínimo Se logra en (6.16). Por lo tanto, siguiendo las flechas hacia atrás desde el nodo (4, 4), podemos rastrear para construir la alineación\\
 
 \subsection{Alineación de secuencias en el espacio lineal a través de dividir y conquistar}
 
@@ -3432,7 +3429,8 @@ Una formulación hacia atrás del programa dinámico Recordemos que usamos f (i,
 
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.18)} Para i < m y j < n tenemos
-g(i, j) = min[αxi+1yj+1 + g(i + 1, j + 1), δ + g(i, j + 1), δ + g(i + 1, j)].}}\\
+$g(i, j) = min[ \alpha xi+1yj+1 + g(i + 1, j + 1),  \delta  + g(i, j + 1),  \delta  + g(i + 1, j)]$
+}}
 
 Esta es solo la recurrencia que se obtiene al tomar el gráfico GXY, "rotarlo" de modo que el nodo (m, n) esté en la esquina inferior izquierda y usar el enfoque anterior. Usando esta imagen, también podemos calcular el algoritmo de programación dinámico completo para construir los valores de g, comenzando desde atrás (m, n). De manera similar, existe una versión eficiente en espacio de este algoritmo de programación dinámica hacia atrás, análoga a la alineación eficiente en espacio, que calcula el valor de la alineación óptima utilizando solo el espacio O (m + n). Nos referiremos a esta versión anterior, como es lógico, como Alineación eficiente de espacio hacia atrás.\\
 
@@ -3447,7 +3445,7 @@ Prueba. Dejemos que? Ij denote la longitud del camino más corto de esquina a es
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.20)} Sea k cualquier número en {0,. . . , n}, y sea q un índice que minimice la cantidad f (q, k) + g (q, k). Luego, hay una ruta de esquina a esquina de longitud mínima que pasa a través del nodo (q, k).}}\\
 
-Prueba. Dejemos? ∗ denota la longitud del camino más corto de esquina a esquina en GXY. Ahora arregla un valor de k ∈ {0,. . . , n}. La ruta más corta de esquina a esquina debe usar algún nodo en la columna kth de GXY, supongamos que es un nodo (p, k), y por ende (6.19)\\
+Prueba. Dejemos? ∗ denota la longitud del camino más corto de esquina a esquina en GXY. Ahora arregla un valor de $k  \in  {0,. . . , n}$. La ruta más corta de esquina a esquina debe usar algún nodo en la columna kth de GXY, supongamos que es un nodo (p, k), y por ende (6.19)\\
 
   ? ∗ = f (p, k) + g (p, k) ≥ min q f (q, k) + g (q, k).\\
 
@@ -3512,7 +3510,7 @@ Para las tres últimas secciones, nos centramos en el problema de encontrar ruta
 
 \subsubsection*{El problema}
 
-Sea G = (V, E) una gráfica dirigida. Suponga que cada borde (i, j) ∈ E tiene un peso asociado cij. Los pesos se pueden usar para modelar una serie de cosas diferentes; Veremos aquí la interpretación en la que el peso cij representa un costo por ir directamente del nodo i al nodo j en el gráfico.\\
+Sea G = (V, E) una gráfica dirigida. Suponga que cada borde $(i, j)  \in  E$ tiene un peso asociado cij. Los pesos se pueden usar para modelar una serie de cosas diferentes; Veremos aquí la interpretación en la que el peso cij representa un costo por ir directamente del nodo i al nodo j en el gráfico.\\
 
 Anteriormente, hablamos sobre el algoritmo de Dijkstra para encontrar rutas más cortas en gráficos con costos de borde positivos. Aquí consideramos el problema más complejo en el que buscamos los caminos más cortos cuando los costos pueden ser negativos. Entre las motivaciones para estudiar este problema, aquí hay dos que destacan particularmente. Primero, los costos negativos resultan ser cruciales para modelar una serie de fenómenos con los caminos más cortos. Por ejemplo, los nodos pueden representar agentes en una configuración financiera, y cij representa el costo de una transacción en la que compramos al agente i y luego le vendemos de inmediato al agente j. En este caso, una ruta representaría una sucesión de transacciones y los bordes con costos negativos representarían transacciones que resulten en ganancias. En segundo lugar, el algoritmo que desarrollamos para lidiar con los bordes del costo negativo resulta, en ciertos aspectos cruciales, a ser más flexible y descentralizado que el algoritmo de Dijkstra. Como consecuencia, tiene aplicaciones importantes para el diseño de algoritmos de enrutamiento distribuido que determinan la ruta más eficiente en una red de comunicación.\\
 
@@ -3554,11 +3552,11 @@ Ese método calcula una ruta más corta desde el origen a todos los demás nodos
 \caption{Figura 6.21 (a) Con costos de borde negativos, el algoritmo de Dijkstra puede dar una respuesta incorrecta para el problema del camino más corto. (b) Agregar 3 al costo de cada borde hará que todos los bordes no sean negativos, pero cambiará la identidad de la ruta s-t más corta.}
 \end{figure}
 
-Como nuestro primer paso codicioso, consideramos el mínimo borde de costo dejando nodo s, es decir, mini∈V csi. Sea v un nodo en el que se obtenga este mínimo. Una observación clave que subyace al algoritmo de Dijkstra es que la ruta más corta de s a v es la ruta de un solo borde {s, v}. Por lo tanto, podemos agregar inmediatamente el nodo v al conjunto S. La ruta {s, v} es claramente la más corta para v si no hay costos de borde negativos: cualquier otra ruta desde s hasta v tendría que comenzar en un borde fuera de Es al menos tan costoso como el borde (s, v).\\
+Como nuestro primer paso codicioso, consideramos el mínimo borde de costo dejando nodo s, es decir, $mini \in V csi$. Sea v un nodo en el que se obtenga este mínimo. Una observación clave que subyace al algoritmo de Dijkstra es que la ruta más corta de s a v es la ruta de un solo borde {s, v}. Por lo tanto, podemos agregar inmediatamente el nodo v al conjunto S. La ruta {s, v} es claramente la más corta para v si no hay costos de borde negativos: cualquier otra ruta desde s hasta v tendría que comenzar en un borde fuera de Es al menos tan costoso como el borde (s, v).\\
 
 La observación anterior ya no es cierta si podemos tener costos de borde negativos. Como lo sugiere el ejemplo de la Figura 6.21 (a), una ruta que comienza en un borde costoso, pero luego compensa con costos subsiguientes de costo negativo, puede ser más económica que una ruta que comienza en un borde barato. Esto sugiere que el enfoque codicioso al estilo Dijkstra no funcionará aquí.\\
 
-Otra idea natural es modificar primero los costos cij agregando una gran M constante a cada uno; es decir, permitimos que cij = cij + M para cada borde (i, j) ∈ E. Si la constante M es lo suficientemente grande, entonces todos los costos modificados no son negativos, y podemos usar el algoritmo de Dijkstra para encontrar el tema de ruta de costo mínimo a los costos c. Sin embargo, este enfoque no encuentra las rutas correctas de costo mínimo con respecto a los costos originales c. El problema aquí es que cambiar los costos de c a c cambia la ruta del costo mínimo. Por ejemplo (como en la Figura 6.21 (b)), si un camino P que consta de tres bordes es solo un poco más barato que otro camino P que tiene dos bordes, luego del cambio en los costos, P será más barato, ya que solo agregamos 2M al costo de P mientras se agrega 3M al costo de P.\\
+Otra idea natural es modificar primero los costos cij agregando una gran M constante a cada uno; es decir, permitimos que cij = cij + M para cada borde $(i, j)  \in  E$. Si la constante M es lo suficientemente grande, entonces todos los costos modificados no son negativos, y podemos usar el algoritmo de Dijkstra para encontrar el tema de ruta de costo mínimo a los costos c. Sin embargo, este enfoque no encuentra las rutas correctas de costo mínimo con respecto a los costos originales c. El problema aquí es que cambiar los costos de c a c cambia la ruta del costo mínimo. Por ejemplo (como en la Figura 6.21 (b)), si un camino P que consta de tres bordes es solo un poco más barato que otro camino P que tiene dos bordes, luego del cambio en los costos, P será más barato, ya que solo agregamos 2M al costo de P mientras se agrega 3M al costo de P.\\
 
 Un Enfoque de Programación Dinámica Trataremos de usar la programación dinámica para resolver el problema de encontrar un camino más corto de att cuando hay costos de borde negativos pero no hay ciclos negativos. Podríamos intentar una idea que nos haya funcionado hasta ahora: el subproblema podría ser encontrar una ruta más corta utilizando solo los primeros nodos i. Esta idea no funciona de inmediato, pero se puede hacer que funcione con cierto esfuerzo. Aquí, sin embargo, discutiremos una solución más simple y eficiente, el algoritmo de Bellman-Ford. El desarrollo de la programación dinámica como una técnica algorítmica general se atribuye a menudo al trabajo de Bellman en la década de 1950; y el algoritmo de ruta más corta de Bellman-Ford fue una de las primeras aplicaciones.\\
 
@@ -3589,8 +3587,7 @@ Corrigamos una ruta óptima P que representa OPT (i, v) como se muestra en la Fi
 Esto lleva a la siguiente fórmula recursiva\\
 
 \colorbox{mygray}{\parbox{15cm}{
-\textbf{(6.22)} Si $i > 0$ entonces $OPT(i, v) = min(OPT(i − 1, v), min_{w∈V}
-(OPT(i − 1, w) + c_{vw}))$.}}\\
+\textbf{(6.22)} Si $i > 0$ entonces $OPT(i, v) = min(OPT(i − 1, v), min_{w \in V} (OPT(i − 1, w) + c_{vw}))$.}}\\
 
 Usando esta recurrencia, obtenemos el siguiente algoritmo de programación dinámica para calcular el valor OPT (n - 1, s).\\
 
@@ -3599,7 +3596,7 @@ Usando esta recurrencia, obtenemos el siguiente algoritmo de programación diná
 \includegraphics[scale=1.2]{Imagenes-Seccion6/cod6_17.PNG}
 \end{figure}
 
-La corrección del método sigue directamente por inducción de (6.23). Podemos limitar el tiempo de ejecución de la siguiente manera. La tabla M tiene n2 entradas; y cada entrada puede tomar O (n) tiempo para calcular, ya que hay como máximo n nodos w ∈ V que debemos considerar.\\
+La corrección del método sigue directamente por inducción de (6.23). Podemos limitar el tiempo de ejecución de la siguiente manera. La tabla M tiene n2 entradas; y cada entrada puede tomar O (n) tiempo para calcular, ya que hay como máximo n nodos $w  \in  V$ que debemos considerar.\\
 
 \colorbox{mygray}{\parbox{15cm}{
 \textbf{(6.2)} El método de la ruta más corta calcula correctamente el costo mínimo de una ruta s-t en cualquier gráfico que no tenga ciclos negativos y se ejecuta en tiempo O (n3).}}\\
@@ -3634,7 +3631,7 @@ Asumimos que podría tomar hasta O (n) tiempo calcular este mínimo, ya que hay 
 
 $O(n \sum_{v \in V} n_V)$.\\
 
-En el Capítulo 3, realizamos exactamente este tipo de análisis para otros algoritmos gráficos, y usamos (3.9) de ese capítulo para delimitar la expresión? v∈V nv para gráficos no dirigidos. Aquí estamos tratando con gráficos dirigidos, y nv denota el número de bordes que dejan v. En cierto sentido, es incluso más fácil calcular el valor de? v∈V nv para el caso dirigido: cada borde deja exactamente uno de los nodos en V, por lo que cada borde se cuenta exactamente una vez por esta expresión. Así tenemos? v∈V nv = m. Conectando esto en nuestra expresión\\
+En el Capítulo 3, realizamos exactamente este tipo de análisis para otros algoritmos gráficos, y usamos (3.9) de ese capítulo para delimitar la expresión? $v \in V$ nv para gráficos no dirigidos. Aquí estamos tratando con gráficos dirigidos, y nv denota el número de bordes que dejan v. En cierto sentido, es incluso más fácil calcular el valor de? $v \in V$ nv para el caso dirigido: cada borde deja exactamente uno de los nodos en V, por lo que cada borde se cuenta exactamente una vez por esta expresión. Así tenemos? $v \in V nv = m$. Conectando esto en nuestra expresión\\
 
 $O(n \sum_{v \in V} n_V)$.\\
 
@@ -3655,7 +3652,7 @@ Dado (6.26), podemos usar (6.22) como antes para mostrar que hemos terminado des
 
 Búsqueda de las rutas más cortas Un problema que debe preocupar es si esta versión eficiente del espacio del algoritmo guarda suficiente información para recuperar las rutas más cortas. En el caso del Problema de alineación de secuencia en la sección anterior, tuvimos que recurrir a un método complicado de dividir y conquistar para recuperar la solución de una implementación similar de espacio eficiente. Aquí, sin embargo, podremos recuperar los caminos más cortos mucho más fácilmente.\\
 
-Para ayudar a recuperar las rutas más cortas, mejoraremos el código haciendo que cada nodo v mantenga el primer nodo (después de sí mismo) en su ruta hacia el destino t; Vamos a denotar este primer nodo por primera [v]. Para mantener primero [v], actualizamos su valor cada vez que se actualiza la distancia M [v]. En otras palabras, siempre que el valor de M [v] se restablece al mínimo mínimo w∈V (cvw + M [w]), establecemos primero [v] en el nodo w que alcanza este mínimo.\\
+Para ayudar a recuperar las rutas más cortas, mejoraremos el código haciendo que cada nodo v mantenga el primer nodo (después de sí mismo) en su ruta hacia el destino t; Vamos a denotar este primer nodo por primera [v]. Para mantener primero [v], actualizamos su valor cada vez que se actualiza la distancia M [v]. En otras palabras, siempre que el valor de M [v] se restablece al mínimo mínimo $w \in V$ (cvw + M [w]), establecemos primero [v] en el nodo w que alcanza este mínimo.\\
 
 Ahora vamos a P denotar el "gráfico de puntero" dirigido cuyos nodos son V, y cuyos bordes son {(v, primero [v])}. La observación principal es la siguiente.\\
 
@@ -3724,7 +3721,7 @@ A través de algunos amigos de amigos, terminas en una visita de consultoría a 
 
 El problema en el que están trabajando actualmente se basa en la concatenación de secuencias de material genético. Si X e Y son cada una de las cadenas sobre un alfabeto S fijo, entonces XY denota la cadena obtenida concatenándolas; escribiendo X seguida de Y. CRU identificó una secuencia objetivo A de material genético, que consta de m símbolos, y desean producir una secuencia que es tan similar a A como sea posible. Para este propósito, tienen una biblioteca L que consta de k secuencias (más cortas), cada una de longitud como máximo n. Pueden producir de forma económica cualquier secuencia consistente en copias de las cadenas en L concatenadas (con repeticiones permitidas).\\
 
-Por lo tanto, decimos que una concatenación sobre L es cualquier secuencia de la forma B1B2 ... B ?, donde cada Bi pertenece al conjunto L. (De nuevo, se permiten repeticiones, por lo tanto, Bi y Bj podrían ser la misma cadena en L, para diferentes valores de i y j.) El problema es encontrar una concatenación sobre {Bi} para la cual el costo de alineación de la secuencia sea lo más pequeño posible. (Para el propósito de calcular el costo de alineación de secuencia, puede asumir que se le asigna un costo de brecha δ y un costo de falta de coincidencia αpq para cada par p, q ∈ S).\\
+Por lo tanto, decimos que una concatenación sobre L es cualquier secuencia de la forma B1B2 ... B ?, donde cada Bi pertenece al conjunto L. (De nuevo, se permiten repeticiones, por lo tanto, Bi y Bj podrían ser la misma cadena en L, para diferentes valores de i y j.) El problema es encontrar una concatenación sobre ${Bi}$ para la cual el costo de alineación de la secuencia sea lo más pequeño posible. (Para el propósito de calcular el costo de alineación de secuencia, puede asumir que se le asigna un costo de brecha $ \delta $ y un costo de falta de coincidencia $ \alpha pq$ para cada par p, $q \in S$).\\
 
 Dé un algoritmo de tiempo polinomial para este problema.\\
 
@@ -3752,7 +3749,7 @@ El algoritmo completo consiste en calcular primero las cantidades c (t, j), para
 
 Como de costumbre, podemos obtener una concatentación que lo logre rastreando la matriz de valores OPT.\\
 
-Consideremos el tiempo de ejecución de este algoritmo. Primero, hay valores de O (m2) c (t, j) que necesitan ser computados. Para cada una, probamos cada cadena de k cadenas B ∈ L, y calculamos la alineación óptima de B con A [t: j] en el tiempo O (n (j - t)) = O (mn). Por lo tanto, el tiempo total para calcular todos los valores de c (t, j) es O (km3n).\\
+Consideremos el tiempo de ejecución de este algoritmo. Primero, hay valores de O (m2) c (t, j) que necesitan ser computados. Para cada una, probamos cada cadena de k cadenas $B  \in  L$, y calculamos la alineación óptima de B con A [t: j] en el tiempo O (n (j - t)) = O (mn). Por lo tanto, el tiempo total para calcular todos los valores de c (t, j) es O (km3n).\\
 
 Esto domina el tiempo para calcular todos los valores de OPT: el cómputo de OPT (j) usa la recurrencia en (6.37), y esto toma O (m) tiempo para calcular el mínimo. Sumando esto sobre todas las opciones de j = 1, 2,. . . , m, obtenemos O (m2) de tiempo para esta parte del algoritmo.\\
 
@@ -3771,8 +3768,8 @@ Redes de flujo Consideraremos gráficos de esta forma y nos referiremos al tráf
 
 \begin{itemize}
     \item Asociada con cada borde e es una capacidad, que es un número no negativo que denotamos ce.
-    \item Hay un único nodo fuente s ∈ V.
-    \item Hay un solo nodo sumidero t ∈ V.
+    \item Hay un único nodo fuente $s  \in  V$.
+    \item Hay un solo nodo sumidero $t  \in  V$.
 \end{itemize}
 
 Los nodos distintos de syt se llamarán nodos internos.

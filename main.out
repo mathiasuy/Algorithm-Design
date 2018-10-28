@@ -1,0 +1,46 @@
+\BOOKMARK [1][-]{section.1}{ Algunos Problem\341s Representativos}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Primer Problema: Emparejamiento Estable}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Cinco Problem\341s Representativos}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Ejercicios Resueltos}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{An\341lisis de algoritmos b\341sicos}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Trazabilidad computacional}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Orden de crecimiento asint\363tico}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Implementando el algoritmo de emparejamiento estable usando listas y arreglos}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Una encuesta de tiempos corrientes comunes.}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Ejercicios resueltos}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{Grafos}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Definiciones b\341sicas y aplicaciones}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.2}{Conexi\363n de grafos y recorrido de grafos}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.3}{Implementaci\363n del recorrido de un grafo usando colas y pilas}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.4}{Probando bipartidad: una aplicaci\363n de BFS}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.5}{Conexi\363n en grafos dirigidos}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.6}{Grafos ac\355clicos dirigidos y orden topol\363gico}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.7}{Ejercicios Resueltos}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Algoritmo voraz}{}% 19
+\BOOKMARK [2][-]{subsection.4.1}{Planificacion de intervalos: el algoritmo \341vido se mantiene adelante}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.2}{Problema relacionado: planificar todos los intervalos}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.3}{Planificacion para minimizar la tardanza: Un argumento de intercambio}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.4}{Caminos m\341s cortos en un grafo}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.5}{El problema del \341rbol de cubrimiento m\355nimo}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.6}{Implementando el algoritmo de Kruskal: La estructura de datos Uni\363n-Busqueda}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.7}{Ejecricios resueltos}{section.4}% 26
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Ejercicio 1}{subsection.4.7}% 27
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Ejercicio 2}{subsection.4.7}% 28
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Ejercicio 3}{subsection.4.7}% 29
+\BOOKMARK [1][-]{section.5}{Divide y vencer\341s}{}% 30
+\BOOKMARK [2][-]{subsection.5.1}{Una primera recurrencia: el algoritmo Mergesort}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.2}{Otras relaciones de recurrencia}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.3}{Conteo de inversiones}{section.5}% 33
+\BOOKMARK [1][-]{section.6}{Programaci\363n Din\341mica}{}% 34
+\BOOKMARK [2][-]{subsection.6.1}{Dise\361ando un algoritmo recursivo}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.2}{Memorizando la recursion}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.3}{Principios de la Programaci\363n Din\341mica: Memoizaci\363n o Iteraci\363n sobre Subproblemas}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.4}{M\355nimos cuadrados segmentados: opciones de m\372ltiples v\355as}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.5}{El problema de la mochila: Agregar una variable}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.6}{6.5 Estructura secundaria del RNA: Programaci\363n din\341mica sobre intervalos}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.7}{Alineaci\363n de secuencias}{section.6}% 41
+\BOOKMARK [2][-]{subsection.6.8}{Alineaci\363n de secuencias en el espacio lineal a trav\351s de dividir y conquistar}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.9}{Caminos m\341s cortos en un gr\341fico}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.10}{Ejercicios resueltos}{section.6}% 44
+\BOOKMARK [1][-]{section.7}{Red de flujos}{}% 45
+\BOOKMARK [2][-]{subsection.7.1}{7.1 El problema de flujo m\341ximo y el algoritmo Ford-Fulkerson}{section.7}% 46
